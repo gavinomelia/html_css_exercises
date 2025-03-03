@@ -57,7 +57,6 @@ body {
 }
 
 .sidebar ul li {
-  font-style: none;
   display: flex;
   padding: 0.5em;
 }
@@ -67,7 +66,6 @@ body {
   justify-content: center;
   text-decoration: none;
   font-weight: bold;
-  font-family: sans-serif;
   color: #f4f4f4;
 }
 
@@ -79,7 +77,9 @@ body {
   grid-area: header;
   margin-top: 1em;
   display: grid;
-  grid-template-areas: "search search search profile" "subheader subheader subheader actions";
+  grid-template-areas:
+    "search search search profile"
+    "subheader subheader subheader actions";
   background-color: #fff;
 }
 
@@ -108,9 +108,8 @@ body {
   font-weight: bold;
   grid-area: profile;
   display: grid;
-  row-gap: 0.2em; /* Reduced the gap between rows */
+  row-gap: 0.2em;
   grid-template-columns: 80px 80px 100px;
-  text-wrap: nowrap;
   justify-content: end;
   padding-right: 4em;
 }
@@ -119,11 +118,11 @@ body {
   display: flex;
   grid-area: subheader;
   padding: 1em;
+}
 
-  i {
-    font-size: 5em;
-    margin-right: 0.2em;
-  }
+.subheader i {
+  font-size: 5em;
+  margin-right: 0.2em;
 }
 
 .subheader .profile {
@@ -177,7 +176,6 @@ body {
   border-radius: 0.5em;
   display: grid;
   gap: 1.5em;
-  grid-template-columns: 1fr 1fr;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-template-rows: repeat(auto-fit, 250px);
 }
@@ -186,11 +184,10 @@ body {
   background-color: #fff;
   padding: 1em;
   border-radius: 0.5em;
-  box-shadow: inset 6px 0 0 0 orange;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .projects .project .project-footer {
@@ -198,12 +195,12 @@ body {
   justify-content: flex-end;
   align-items: center;
   margin-top: auto;
+}
 
-  i {
-    font-size: 1.5em;
-    color: rgb(61, 61, 61);
-    margin-right: 1em;
-  }
+.projects .project .project-footer i {
+  font-size: 1.5em;
+  color: rgb(61, 61, 61);
+  margin-right: 1em;
 }
 
 .announcements {
@@ -260,11 +257,6 @@ body {
   font-size: 2.5em;
   color: rgb(61, 61, 61);
   margin-right: 0.4em;
-}
-
-.treding .trending-item .description {
-  display: flex;
-  flex-direction: column;
 }
 
 .subtitle {
