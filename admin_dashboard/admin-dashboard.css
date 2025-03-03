@@ -1,84 +1,82 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
 .main-content {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 .layout {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr 8fr;
-    grid-template-areas:
-        "sidebar header"
-        "sidebar main"
-
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 1fr 8fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
 }
 
 .subtitle {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 /* Sidebar container */
 .sidebar {
-    display: grid;
-    grid-template-rows: 1fr 1fr 8fr;
-    grid-area: sidebar;
-    text-align: center;
-    background-color: rgb(69, 144, 206);
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    color: #f4f4f4;
-
+  display: grid;
+  grid-template-rows: 1fr 1fr 9fr;
+  grid-area: sidebar;
+  background-color: rgb(69, 144, 206);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  color: #f4f4f4;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  padding-left: 1em;
+}
 
-    h1 {
-        display: flex;
-        align-items: center;
-        margin: 0;
-    }
+.logo h1 {
+  font-size: 1.7em;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
 
-    i {
-        font-size: 1.3em;
-        margin-right: 0.3em;
-    }
+.logo i {
+  font-size: 1.5em;
+  margin-right: 0.3em;
 }
 
 .sidebar ul {
-    font-size: 1.2em;
-    list-style: none;
+  font-size: 1.2em;
+  list-style: none;
+  padding-inline-start: 1em;
+}
 
-    li {
-        font-style: none;
-        display: flex;
-        padding: 0.5em;
+.sidebar ul li {
+  font-style: none;
+  display: flex;
+  padding: 0.5em;
 
-        a {
-            display:flex;
-            justify-content: center;
-            text-decoration: none;
-            font-weight: bold;
-            font-family: sans-serif;
-            color: #f4f4f4
-          }
+  a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #f4f4f4;
+  }
 
-        i {
-            margin-right: 0.9em;
-        }
-    }
+  i {
+    margin-right: 0.9em;
+  }
 }
 
 .main-content {
-    grid-area: main;
-    padding: 2em;
-    background-color: #f4f4f4;
+  grid-area: main;
+  padding: 2em;
+  background-color: #f4f4f4;
 }
