@@ -81,7 +81,6 @@ body {
   display: grid;
   grid-template-areas: "search search search profile" "subheader subheader subheader actions";
   background-color: #fff;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header i {
@@ -106,6 +105,7 @@ body {
 }
 
 .profile {
+  font-weight: bold;
   grid-area: profile;
   display: grid;
   row-gap: 0.2em; /* Reduced the gap between rows */
@@ -162,11 +162,12 @@ body {
   padding: 2em;
   background-color: rgb(227, 232, 239);
   display: grid;
-  grid-template-columns: 3fr 3fr 1fr;
+  grid-template-columns: 6fr 1fr;
   grid-template-areas:
-    "projects projects announcements"
-    "projects projects announcements"
-    "projects projects trending";
+    "projects announcements"
+    "projects announcements"
+    "projects trending"
+    "projects trending";
 }
 
 .projects {
@@ -185,11 +186,11 @@ body {
   background-color: #fff;
   padding: 1em;
   border-radius: 0.5em;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   box-shadow: inset 6px 0 0 0 orange;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .projects .project .project-footer {
@@ -206,17 +207,79 @@ body {
 }
 
 .announcements {
+  font-size: 0.8em;
+  max-height: 400px;
+  min-width: 200px;
   grid-area: announcements;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
   background-color: #fff;
   padding: 2em;
   border-radius: 0.5em;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 4em;
+}
+
+.announcements .announcement {
+  margin-bottom: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-bottom: rgb(159, 159, 159) 0.5px solid;
+}
+
+.announcements .announcement:last-child {
+  border-bottom: none;
+}
+
+.announcements .announcement p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .trending {
+  max-height: 400px;
+  min-width: 200px;
   grid-area: trending;
   background-color: #fff;
-  padding: 2em;
   border-radius: 0.5em;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  font-size: 0.8em;
+}
+
+.trending .trending-item {
+  display: flex;
+  text-overflow: ellipsis;
+  align-items: center;
+}
+
+.trending .trending-item i {
+  font-size: 2.5em;
+  color: rgb(61, 61, 61);
+  margin-right: 0.4em;
+}
+
+.treding .trending-item .description {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  margin: 0;
+  height: fit-content;
+  width: fit-content;
+}
+
+.pair {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.pair .subtitle {
+  padding-bottom: 0.7em;
 }
